@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{home.title}}{% endblock title %}
+
+{% block header %} {% include 'header.html' %} {% endblock header %}
+
+{% comment %} {% block carousel %} {% include 'carousel.html' %} {% endblock carousel %} {% endcomment %}
+
+{% block content %}
+<!--content-->
+
+
+<div class="home">
+  <a href="{% url 'quiz_home' %}">home</a>
+</div>
+
+<div class="container-fluid">
+  <div class="subjects">
+    <div class="title">Wilberland's Quiz</div>
+    <div class="subject">
+      {% for subject in subjects %}
+      <a href="{% url 'quiz_page' subject_id=subject.id %}"><button>{{subject.name}}Quiz</button></a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% comment %} {% block contact %} {% include 'contact.html' %} {% endblock contact %} {% endcomment %}
+
+{% comment %} {% block footer %} {% include 'footer.html' %} {% endblock footer %} {% endcomment %}

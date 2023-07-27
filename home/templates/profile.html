@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{details.title}}{% endblock title %}
+
+{% block header %}  {% include 'header.html' %} {% endblock header %}
+
+{% block carousel %}  {% include 'carousel.html' %} {% endblock carousel %}
+
+{% block content %}
+<div class="container avata">
+    <div class="row justify-content-center">
+      <h2 class="text">Profile Settings</h2>
+      <div class="col-12 col-md-5">
+        <a href=""><img src="{{profile.pix.url}}" class="w-50 h-20" alt=""></a>
+        <p>upload your profile picture</p>
+        <ul class="list-unstyled mt-5">
+          <li class="mb-3"><a href="{% url 'index' %}" class="btn w-75 btn-outline-primary">Home</a></li>
+          <li class="mb-3"><a href="{% url 'profile' %}" class="btn w-75 btn-outline-primary">Profile</a></li>
+          <li class="mb-3"><a href="{% url 'profile_update' %}" class="btn w-75 btn-outline-primary">Profile Update</a></li>
+          <li class="mb-3"><a href="{% url 'quiz' %}" class="btn w-75 btn-outline-primary">Quiz subjects</a></li>
+          <li class="mb-3"><a href="{% url 'password' %}" class="btn w-75 btn-outline-primary">password change</a></li>
+        </ul>    
+      </div>
+      <div class="col-12 col-md-7">
+          <div class="cform">
+            <div class="ccform">
+              <form action="">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="name" value="{{profile.first_name}}" class="form-control" id="floatingInput" placeholder="firstname">
+                      <label for="floatingInput">First Name</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="name" value="{{profile.last_name}}" class="form-control" id="floatingInput" placeholder="lastname">
+                      <label for="floatingInput">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" value="{{profile.user.username}}" class="form-control" id="floatingInput" placeholder="username">
+                    <label for="floatingInput">Username</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" value="{{profile.email}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" value="{{profile.nationality}}" class="form-control" id="floatingPassword" placeholder="nationality">
+                    <label for="floatingInput">Nationality</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="age" class="form-control" id="floatingPassword" placeholder="number">
+                    <label for="floatingnumber">Age</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" value="" class="form-control" id="floatingPassword" placeholder="number">
+                    <label for="floatingnumber">Phone number</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="state" value="{{profile.state}}" class="form-control" id="floatingPassword" placeholder="state">
+                    <label for="floatingInput">State of Residence</label>
+                  </div>
+                  <div>
+                    {% comment %} <button type="save" class="btn btn-primary">Save profile</button> {% endcomment %}
+                  </div>
+                </div>  
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block contact %} {% include 'contact.html' %} {% endblock contact %}
+
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

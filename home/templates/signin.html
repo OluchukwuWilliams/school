@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{details.title}}{% endblock title %}
+
+{% block header %} {% include 'header.html' %} {% endblock header %}
+
+{% block carousel %} {% include 'carousel.html' %} {% endblock carousel %}
+
+{% block content %}
+<!--content-->
+<div class="container signin">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 mt-5 mb-2">
+      <h2 class="text-left">Login</h2>
+    </div>
+    <div class="col-12 col-md-8">
+        <div class="cform">
+          <div class="ccform">
+            <form action="{% url 'signin' %}" method="POST">
+              {% csrf_token %}
+                <div class="row justify-content-center">
+                  <div class="form-floating mb-3">
+                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="username">
+                    <label for="floatingInput">Username or Id</label>
+                  </div>
+               
+                  <div class="form-floating mb-3 hula">
+                    <input type="password" name="password" class="form-control grab" id="floatingInput" placeholder="Password">
+                    <div class="hula1">
+                      <i class="fa-solid fa-eye"></i>
+                      <i class="fa-solid fa-eye-slash"></i>
+                    </div>
+                    <label for="floatingInput">Password</label>
+                    <p>Notice: User names, Ids and passwords are Case sensitive</p>
+                  </div>
+                
+                  <div>
+                    <button type="submit" href="{% url 'profile' %}" class="btn btn-primary">Login</button>
+                    {% comment %} <button type="submit" class="btn btn-primary">Login</button> {% endcomment %}
+                    {% comment %} <a href="{% url 'profile' %}" class="btn btn-primary">Login</a> {% endcomment %}
+                  </div>
+                  <p>if you do not have an account, kindly create one <a href="{% url 'signup' %}">Here</a></p>
+                </div>  
+            </form>
+          </div>
+      </div>
+    </div>
+    <p class="mt-3">Don't forget to logout or exit your browser when you're done. if you are having trouble logging in, make sure to enable cookies in your web browser.
+      You don't have an account because you are a fresh student, kindly use the signup page/register for your account to be created.
+      Or simply forgot your username or password? Request a new password.
+      You are student parents and want to monitor study progress of your child/ward? Request a temporary parent password.
+      Prerequisite for getting parents access is that you have a valid email address and that this address has been entered by the student into 
+      the parents email address
+    </p>
+  </div>
+</div>
+{% endblock content %}
+
+{% block contact %} {% include 'contact.html' %} {% endblock contact %}
+
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

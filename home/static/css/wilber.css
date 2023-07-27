@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --text-color:black;
+    --body--: white;
+    
+    
+}
+.navbar{
+    background: rgb(207, 96, 115);
+    /* height: 5rem; */
+    /* justify-content: space-around; */
+
+}
+.dropdown-menu{
+    background: rgb(153, 106, 115);
+}
+.navbar .navbar-brand{
+    color: blue;
+    font-weight: 700;
+}
+.nav-item .nav-link{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.dropdown-item{
+    color: white;
+} 
+.dropdown-divider{
+    color: rgb(196, 179, 182);
+}
+.carousel-inner{
+    clip-path: polygon(100% 0, 100% 85%, 57% 91%, 0 100%, 0 0);
+}
+.carousel-inner .carousel-item{
+    height: 75vh;
+    width: 100%;
+}
+.carousel-item{
+    transition: 1s;
+}
+h4{
+    font-size: 2rem;
+    color: gold;
+    font-weight: 1000;
+}
+span{
+    color: orangered;
+    font-weight: 1000;
+}
+.welcome{
+    /* background-color: silver; */
+    background-image: url(../img/tim-swaan-eOpewngf68w-unsplash.jpg);
+    width: 100%;
+}
+.goodygoody{
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+.map iframe{
+    width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+}
+.cform1{
+    width: 100%;
+    height: 100vh;
+    background-color: cadetblue;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.cform label{
+    padding-left: 1rem;
+}
+.welcome2{
+    /* background: pink; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.welcome2 h2{
+    font-size: 1.2rem;
+
+}
+.welcome2 h2{
+    color: gold;
+}
+.welcome2 span{
+    color: blue;
+}
+
+.goodygoody h2{
+    color: white;
+}
+.goodygoody label{
+    color: white;
+}
+.gallery img{
+    height: 50vh;
+    width: 100%;
+    padding: 2px;
+}
+.footerside img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+h1{
+    color: darkmagenta;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: gold;
+}
+.footerside p{
+    margin-left: 1.5rem;
+    color: white;
+}
+.footerside{
+    background-color: rgb(172, 98, 112);
+    /* padding-left: 3rem; */
+    padding: 3rem;
+}
+.footerside h5{
+    color: white;
+}
+.footerside ul li{
+    color: white;
+}
+.footerside ul li a{
+    color: gold;
+}
+.social ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.footerside{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+.footer2{
+    background-color: black;
+}
+.footer2 {
+    color: white;
+    background-color: black;
+    padding-left: 3rem;
+    padding-top: 1.2rem;
+    height: 5rem;
+}
+.middle h3{
+    color: gold;
+    font-weight: 1000;
+}
+.goodygoody h2{
+    color: gold;
+    font-weight: 1000;
+    padding-top: 2rem;
+}
+.welcome h2{
+    color: gold;
+    font-weight: 1000;
+}
+.welcome p{
+    color: white;
+    font-weight: 500;
+}
+.welcome h6{
+    color: white;
+}
+.signup img{
+    height: 100vh;
+    width: 100%;
+    border-radius: 50%;
+}
+.goodygoody p{
+    color: red;
+}
+.content{
+    padding-left: 2rem;
+    background-color: pink;
+}
+.hula{
+    position: relative;
+}
+.hula1{
+    position: absolute;
+    top: 1rem;
+    left: 90%;
+}
+.hula1 .fa-eye{
+    display: none;
+}
+.hula1 .fa-eye-slash{
+    display: none;
+}
+.hula p{
+    color: red;
+}
+/* .show-hide{
+    position: relative;
+}
+.show{
+    position: absolute;
+    top: 1rem;
+    left: 90%;
+}
+.show .fa-eye{
+    display: none;
+}
+.show .fa-eye-slash{
+    display: none;
+}
+.show .fa-eye-slash{
+    /* display: block; */
+ */
+.avata img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: slategrey;
+}
+.cform{
+    width: 100%;
+    padding-top: 2rem;
+}
+.ccform{
+    width: 70%;
+}
+.avata p{
+    padding-left: 5rem;
+}
+.avata h2{
+    padding-left: 15rem;
+    padding-bottom: 0.5rem;
+    text-decoration: underline;
+}
+#quiz p{
+    padding-left: 2rem;
+}
+.prev{
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+.sub{
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+#quiz{
+    background-color: pink;
+}
+.profwwon{
+    background-color: pink;
+    padding-top: 2rem;
+}
+.togglebar{
+    border-collapse: collapse;
+    color: black;
+    display: block;
+    align-items: end;
+    outline: none;
+}
+/* @media screen and(min-width:576px){ */
+    /* body{ */
+        /* background-color: green; */
+        /* background-image: radial-gradient(whitesmoke, green); */
+    /* } */
+    /* nav{ */
+        /* display: none; */
+    /* } */
+/* } */

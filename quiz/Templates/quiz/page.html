@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{subject.name}} {% endblock title %}
+
+{% block header %} {% include 'header.html' %} {% endblock header %}
+
+{% comment %} {% block carousel %} {% include 'carousel.html' %} {% endblock carousel %} {% endcomment %}
+
+{% block content %}
+<!--content-->
+<div class="sections mt-2 ps-2 mb-2">
+  <a href="{% url 'quiz_home' %}">home</a>                        
+</div>
+<p class="btn btn-outline-danger" id="demo">Timer</p>
+
+  {% comment %} <div class="title"> {% endcomment %}
+    {% comment %} {% if subject.id == 1 %} {% endcomment %}
+    {% comment %} {% if page_obj.number == 1 %} {% endcomment %}
+    
+    {% comment %} {% elif page_obj.number == 2 %} {% endcomment %}
+    {% comment %} {% endif %} {% endcomment %}
+    {% comment %} {% endif %} {% endcomment %}
+  {% comment %} </div> {% endcomment %}
+
+<div class="container-fluid content">
+    <p>Quiz - {{subject.name}}</p>
+<form method="post">
+  {% csrf_token %}
+    {% for question in page_obj %}
+      <p>{{question.question_text}}</p>
+      {% for choice in question.choice_set.all %}
+        <p><input type="radio" name="{{question.id}}" value="{{choice.id}}" id="choice_{{choice.id}}">
+          <label for="choice_{{choice.id}}">{{choice.coice_text}} {{choice.choice_text}}</label><br>
+        </p>
+      {% endfor %}
+    {% endfor %}
+
+    {% if page_obj.has_previous %}
+        <button class="btn btn-info"><a href="{% url 'quiz_page' subject_id=subject.id page=page_obj.previous_page_number %}">Previous</a></button>
+    {% endif %}
+
+    {% if page_obj.has_next %}
+      <button type="submit" class="btn btn-info">Next</button>
+    {% else %}
+      <button type="submit" class="btn btn-info">Submit</button>
+    {% endif %}
+</form>
+
+{% endblock content %}
+
+{% comment %} {% block contact %} {% include 'contact.html' %} {% endblock contact %} {% endcomment %}
+
+{% comment %} {% block footer %} {% include 'footer.html' %} {% endblock footer %} {% endcomment %}

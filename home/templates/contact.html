@@ -1,0 +1,62 @@
+
+<div class="container-fluid goodygoody" id="contact us">
+    <h2 class="text-center mb-3" id="#contact us">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-7">
+        <div class="map mt-4 mb-3 w-100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4722310601483!2d3.
+          3919290094309167!3d6.588073293378065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+          1!3m3!1m2!1s0x103b9294ab058809%3A0x3d781b23b8c11619!2s5%20Alh.
+          %20Owoade%20St%2C%20Ketu%20105102%2C%20Lagos!5e0!3m2!1sen!2sng!4v1683667373301!5m2!1sen!2sng" 
+          width="600" height="450" style="border:0;" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    <div class="col-8 col-md-5 mt-4 mb-3">
+        <div class="cform1">
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="row justify-content-center ms-2 ps-3">
+                    <div class="col-md-5 ms-3">
+                        <label for="inputText" class="form-label">First Name</label>
+                        <input type="text" name="firstName" class="form-control" id="inputText" placeholder="First Name">
+                    </div>
+                    <div class="col-md-5 ms-3">
+                        <label for="inputText" class="form-label">Last Name</label>
+                        <input type="text" name="lastName" class="form-control" id="inputText" placeholder="Last Name">
+                    </div>
+                    <div class="col-md-10">
+                        <label for="inputEmail4" class="form-label">email</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="email">
+                    </div>
+                    {% comment %} <div class="col-md-5 ms-3">
+                        <label for="inputpassword" class="form-label">password</label>
+                        <input type="password" class="form-control" id="inputpassword" placeholder="password">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="inputEmail4" class="form-label">confirm password</label>
+                        <input type="password" class="form-control" id="inputpassword" placeholder="password">
+                    </div> {% endcomment %}
+                    <div class="col-md-10 ms-3">
+                        <label for="inputAddress" class="form-label">subject</label>
+                        <input type="text" name="subject" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-md-10 ms-3">
+                        <label for="inputText" class="form-label">Enter Message</label>
+                        <textarea name="message" class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    {% comment %} <div class="col-md-10 ms-3">
+                        <label for="inputText" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputText" placeholder="city">
+                    </div> {% endcomment %}
+                    <div class="col-md-3 ms-3 mt-4">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>      
+</div>
+
+  <!-- content ends -->

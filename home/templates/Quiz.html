@@ -1,0 +1,38 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% comment %} {% load static %} {% endcomment %}
+
+{% comment %} {% block title %} {{details.title}}{% endblock title %} {% endcomment %}
+
+{% comment %} {% block header %} {% include 'header.html' %} {% endblock header %} {% endcomment %}
+
+{% comment %} {% block carousel %} {% include 'carousel.html' %} {% endblock carousel %} {% endcomment %}
+
+{% block content %}
+<!--content-->
+<div class="container-fluid welcome2 mb-5" id="about">
+    <div class="container signin">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 mt-5 mb-2">
+          <h2 class="text-center mb-5">WELCOME TO WILBERLAND Quiz Page!</h2>
+          <p><span>Instructions:</span>  Each section/page of the quiz is made up of 5 questions.
+            click next to view the next page or preview to view the previous page.  At the end of the 
+            last page, you will click submit to mark the end of your quiz examination and your result 
+            will be shown to you immediately. Failure to submit your quiz will result to automatic 
+            failure and disqualification from the exam.
+          </p>
+          <p>There are 4 subjects altogether: World Economics, English Language, Biology and 
+            Mathematics. Each subject is about 10 questions and the summation of all is 40 questions</p>
+            
+          <p class="mt-3">This Wilberland Quiz Page will lead you to 
+            the various quiz subjects that you are required to attempt. To continue with the 
+            quiz, click <a href="{% url 'quiz_home' %}">Here</a></p>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% comment %} {% block contact %} {% include 'contact.html' %} {% endblock contact %} {% endcomment %}
+
+{% comment %} {% block footer %} {% include 'footer.html' %} {% endblock footer %} {% endcomment %}

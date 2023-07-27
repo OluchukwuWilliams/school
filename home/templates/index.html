@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} |Wilberland_Page {% endblock title %}
+
+{% block header %} {% include 'header.html' %} {% endblock header %}
+
+{% block carousel %} {% include 'carousel.html' %} {% endblock carousel %}
+
+{% block content %}
+<!--content-->
+<div class="container-fluid welcome mb-5" id="about">
+  <h2 class="text-center">WELCOME TO WILBERLAND</h2>
+    <p class="text-center">Wilberland institute is a Citadel of knowledge, 
+    an empire for the grooming of the intectuals. Our interest is in 
+    improving the lives and status of the country. Our commitment 
+    is to impact very positively in every Nigerian youth 
+    and to improve the economy and well-being of Nigeria 
+    by improving on our educational standard.</p>
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-7">
+        <img src="{% static '' %}img/UI_golden_01.jpg" class="w-100 h-75" alt="">
+      </div>
+
+      <div class="col-10 col-md-2">
+        <div class="lib w-100">
+          <h6 class="text-center"><b> OUR MISSION</b></h6>
+            <p class="text-center">To produce graduates 
+              who are worthy in character 
+              and sound judgement. 
+              To expand the frontiers of knowledge 
+              through provision of excellent conditions 
+              for learning and research
+            </p>
+        </div>
+      </div>
+      <div class="col-10 col-md-3">
+        <div class="lib w-100">
+          <h6 class="text-center"><b> OUR VISION</b></h6>
+            <p class="text-center">To be a word class institution for 
+              academic excellence geared towards 
+              meeting societal needs by inculcating technological ideas into our 
+              horizons of learning, imbueing our students with that unfathomable 
+              confidence to challenging whatever challenges they encounter in any part of the globe
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid middle" id="academics">
+  <h3 class="text-center mb-4">EXECUTIVE PROGRAMMES</h3> 
+  <div class="row justify-content-center">  
+    <div class="col-10 col-md-4">
+      <img src="{% static '' %}img/amba.png" alt="">
+      <p>We are accredited by The Association of MBAs
+        (AMBA). This puts WI amongst the exclusive 
+        group of only 2% of business Schools in 70 
+        countries to achieve this accreditation
+      </p>   
+    </div>
+    <div class="col-10 col-md-4">
+      <img src="{% static '' %}img/AACSB-Logo.png" alt="">
+      <p>In 2016, WI became the first institution in West
+        Africa to be accredited by the Association to 
+        Advance Collegiate Schools of Business (AACBS)
+      </p>
+    </div>
+    <div class="col-10 col-md-4">
+      <img src="{% static '' %}img/GNAM_revised-logo-2.jpg" alt="">
+      <P>In 2014, WI joined the Global Network for 
+        Advanced Management (GNAM), an alliance of
+        32 leading business schools that seek to drive 
+        innovation and create valued collaboration.
+      </P>
+    </div>
+  </div>
+</div>
+{% comment %} <div class="container-fluid middle" id="academics">
+  <h3 class="text-center mb-4">our category</h3> 
+  <div class="row justify-content-center gy-3">  
+    {% if category %}
+      {% for items in category %}
+        <div class="col-10 col-md-4">
+          <img src="{{items.img.url}}" alt="">
+          <p>We are accredited by The Association of MBAs
+            (AMBA). This puts WI amongst the exclusive 
+            group of only 2% of business Schools in 70 
+            countries to achieve this accreditation
+          </p>   
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div> {% endcomment %}
+    
+<div class="container-fluid mt-4 mb-4" id="academics">
+  <div class="row justify-content-center">
+    <div class="col-6 col-md-2">
+      <img src="{% static '' %}img/amba.png" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="{% static '' %}img/prme.png" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="{% static '' %}img/aabs.png" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="{% static '' %}img/AACSB-Logo.png" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="{% static '' %}img/GBSNmember_logo.png" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="{% static '' %}img/gmac_logo.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="container-fluid gallery" id="home">
+  <h4 class="">GALLERY</h4>
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-4 mb-2">
+      <img src="{% static '' %}img/DSC_0245.jpg" class="width-100" alt="">
+    </div>
+    <div class="col-10 col-md-4 mb-2">
+      <img src="{% static '' %}img/DSC_0489.jpg" class="width-100" alt="">
+    </div>
+    <div class="col-10 col-md-4 mb-2">
+      <img src="{% static '' %}img/IMG_9307.jpg" class="width-100" alt="">
+    </div>
+    <div class="col-10 col-md-4 mb-1">
+      <img src="{% static '' %}img/IMG_9290.jpg" class="width-100" alt="">
+    </div>
+    <div class="col-10 col-md-4 mb-1">
+      <img src="{% static '' %}img/IMG_0885.jpg" class="width-100" alt="">
+    </div>
+    <div class="col-10 col-md-4 mb-1">
+      <img src="{% static '' %}img/DSC_1304.jpg" class="width-100" alt="">
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block contact %} {% include 'contact.html' %} {% endblock contact %}
+
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{Quiz_Result}} {% endblock title %}
+
+{% block header %} {% include 'header.html' %} {% endblock header %}
+
+{% comment %} {% block carousel %} {% include 'carousel.html' %} {% endblock carousel %} {% endcomment %}
+
+{% block content %}
+<!--content-->
+<div class="container">
+  <h1>Quiz Result</h1>
+  <div class="score">
+    Your Score: {{score}}
+  </div>
+  <div class="message">
+    {% if score >= 12 %}
+      (congratulation! You passed the quiz.)
+    {% else %}
+      poor performance! Kindly reseat the exam.
+    {% endif %}
+  </div>
+  <div class="button-container">
+    <a class="button" href="{% url 'quiz_home' %}">back to Subjects</a>
+    <a class="button" href="{% url 'index' %}">Go Home</a>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% comment %} {% block contact %} {% include 'contact.html' %} {% endblock contact %} {% endcomment %}
+
+{% comment %} {% block footer %} {% include 'footer.html' %} {% endblock footer %} {% endcomment %}
