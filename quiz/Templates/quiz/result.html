@@ -11,15 +11,18 @@
 {% block content %}
 <!--content-->
 <div class="container">
-  <h1>Quiz Result</h1>
-  <div class="score">
-    Your Score: {{score}}
-  </div>
+  <h1>Quiz Results</h1>
+  {% for quiz_result in quiz_results %}
+    <p>Your total Score: {{score}} out of
+      {{ total_questions}}</p>
+    <p> percentage: {{percentage}}%</p>
+
+  {% endfor%}
   <div class="message">
     {% if score >= 12 %}
-      (congratulation! You passed the quiz.)
+      (congratulation! You passed the quiz)
     {% else %}
-      poor performance! Kindly reseat the exam.
+      (poor performance! Kindly reseat the exam.)
     {% endif %}
   </div>
   <div class="button-container">

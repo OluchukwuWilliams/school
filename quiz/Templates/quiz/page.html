@@ -13,8 +13,6 @@
 <div class="sections mt-2 ps-2 mb-2">
   <a href="{% url 'quiz_home' %}">home</a>                        
 </div>
-<p class="btn btn-outline-danger" id="demo">Timer</p>
-
   {% comment %} <div class="title"> {% endcomment %}
     {% comment %} {% if subject.id == 1 %} {% endcomment %}
     {% comment %} {% if page_obj.number == 1 %} {% endcomment %}
@@ -26,13 +24,14 @@
 
 <div class="container-fluid content">
     <p>Quiz - {{subject.name}}</p>
-<form method="post">
+<form method="POST">
+  {% comment %} <input type="submit" value="Submit"> {% endcomment %}
   {% csrf_token %}
     {% for question in page_obj %}
       <p>{{question.question_text}}</p>
       {% for choice in question.choice_set.all %}
         <p><input type="radio" name="{{question.id}}" value="{{choice.id}}" id="choice_{{choice.id}}">
-          <label for="choice_{{choice.id}}">{{choice.coice_text}} {{choice.choice_text}}</label><br>
+          <label for="choice_{{choice.id}}">{{choice.choice_text}}</label><br>
         </p>
       {% endfor %}
     {% endfor %}
@@ -44,7 +43,8 @@
     {% if page_obj.has_next %}
       <button type="submit" class="btn btn-info">Next</button>
     {% else %}
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit"   action="{% url 'calculate_score' %}" class="btn btn-info">Submit</button>
+      
     {% endif %}
 </form>
 
